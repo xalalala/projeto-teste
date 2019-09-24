@@ -1,0 +1,42 @@
+.divForm{
+    align-items: stretch;
+    display: flex; 
+    margin-top: 20px;   
+}
+
+/* Dimensionando a foto para nao ficar grande */
+.imagem{
+    max-width: 150px;
+    max-height: 200px;   
+    margin-top: 70px;
+}
+
+.formulario h5{
+    text-align: center;
+}
+
+.btnCancelar{
+    margin-left: 20px;
+}
+
+.divEnviarFoto{
+    margin-top: 10px;
+    padding: 0px;
+    /* background-color: yellow; */
+}
+
+.label{
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.btnSelecao{
+    margin-top: 10px;
+    padding: 0px;
+}
+
+#selecao-arquivo{
+    display: none; 
+}
+

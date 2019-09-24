@@ -1,0 +1,26 @@
+.criarSenha{
+    width: 100%;
+    padding: 0px;
+    margin: none;
+    min-height: 400px;
+    background-color: rgba(247, 245, 245, 0.952);
+    padding: 15px;
+}
+
+.teste{
+    border: 2px dotted black;
+}
+
+/* Margin antes do botao */
+.red{
+    margin-left: 10px;
+}
+.divCard, .card{
+    margin-left: 20px;
+}
+.divCard{
+    margin-top: 50px;
+}
+.card-action, .card-title{
+    text-align: center;
+}

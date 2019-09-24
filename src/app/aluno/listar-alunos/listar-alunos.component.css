@@ -1,0 +1,45 @@
+/* Estilizando a secao de Listar Alunos */
+.listarAlunos{
+    width: 97%;
+    margin: 20px;
+    min-height: 470px;
+    background-color: rgba(247, 245, 245, 0.952);
+    padding: 15px;
+    border-radius: 3px;
+    
+    /* border: 2px green dotted; */
+}
+
+/* Topo com o Titulo */
+.topo{
+    /* font-family: Sans-Serif; */
+    /* font-size:20px; */
+    /* font-weight: bold; */
+    
+    
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Estilizando a Div da Table */
+.table{
+    padding: 0px;
+}
+
+
+/* Estilizando a Tabela */
+/* Deixando os quatro cantos com bordas arredondadas. */
+/* .table table 
+    th:first-child,
+    th:last-child,
+    tr:last-child td:first-child,
+    tr:last-child td:last-child
+{
+    border-collapse:separate !important;
+    border: solid 2px gray;
+    border-radius: 20% !important;
+    
+
+} */
+

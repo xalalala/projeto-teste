@@ -1,0 +1,53 @@
+<!-- Secao de Listar Alunos -->
+<section class="listarAlunos">
+    <!-- Div para compreender tudo -->
+    <div class="row">
+        <div class="row topo flow-text">
+            <span class="card-title">Alunos Cadastrados no Banco de Dados</span>
+        </div>
+        <!-- Div da Tabela -->
+        <div class="table row">
+            <!-- Div do CardPanel -->
+            <div class="col s12 m12 l3">
+                <div class="col s10 card-panel hoverable">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <span class="card-title">Novos alunos</span>
+                            <p>Cadastre novos alunos de maneira rápida e mantenha seu sistema atualizado</p>
+                        </div>
+                        <div class="card-action">
+                            <a routerLink="/cadAlunoProfessor">Cadastrar Alunos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tabela em Si -->
+            <table class="col s8 centered striped ">
+                <thead> 
+                    <tr>
+                        <th>CPF</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Situation</th>
+                        <th>Description</th>
+                        <th>Alterar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela_alunos">
+                    <tr *ngFor="let aluno of alunos" >
+                        <td>{{ aluno.cpf_aluno  }}</td>
+                        <td>{{ aluno.nome_aluno }}</td>
+                        <td>{{ aluno.codigo }}</td>
+                        <td>{{ aluno.situacao_aluno }}</td>
+                        <td>{{ aluno.descricao_aluno }}</td>
+                        <td><a class="btn" (click)="alterarAluno(aluno.codigo)">Alterar</a></td>
+                        <td><a class="btn red" (click)='deletarAluno(aluno.codigo)'>Excluir</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>

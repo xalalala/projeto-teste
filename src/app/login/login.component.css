@@ -1,0 +1,26 @@
+.telaLogin{
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;   
+}
+
+.telaLogin a {
+    margin-left: 10px;
+}
+
+.divLogin{
+    margin: auto;
+    width: 40%;
+    background-color: rgba(247, 245, 245, 0.952);
+    padding: 15px;
+    border-radius: 3px;
+    
+}
+
+.btnLogin{
+    margin-left: 10px;
+}
+
+.progress{
+    display: none;
+}

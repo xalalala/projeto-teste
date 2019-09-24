@@ -1,0 +1,71 @@
+<section class="MinhaConta">
+        <h5>Meus Dados</h5>
+        <div class="row">
+            <form class="col s12 " method="POST">
+                <div class="col s12 divForm">
+                    <div class="col s6 ">
+    
+                        <div class="row">
+                            <div class="input-field col s7">
+                                <i class="material-icons prefix">fingerprint</i>
+                                <h5 class="info">Seu nome aqui</h5>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <h5 class="info">Seu nome aqui</h5>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <h5 class="info">Seu nome aqui</h5>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock</i>
+                                <h5 class="info">Seu nome aqui</h5>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="col s6 divCadImagem">
+    
+                        <div class="row divEnviarFoto">
+                            <div class="col s4"></div>
+    
+                            <div class="col s8">
+                                <!-- Este campo está invisivel -->
+                                <input #file type="file" accept='image/*' (change)="preview(file.files)"
+                                    id="selecao-arquivo">
+                            </div>
+                        </div>
+    
+                        <div class="row imagem">
+                            <div class="col s2"></div>
+                            <img [src]="imgURL" height="200" *ngIf="imgURL" class="preview" name="foto_usuario"
+                                [(ngModel)]="imagens.foto_usuario" ngDefaultControl>
+                        </div>
+    
+                    </div>
+                </div>
+                
+                <div class="row col s4">
+
+                </div>
+                <div class="row col s4">
+                    <button type="submit" class="btn waves-effect waves-light alterar" (click)="alterarDados()">Alterar dados</button>
+                </div>
+                <div class="row col s4">
+
+                </div>
+    
+            </form>
+        </div>
+    </section>

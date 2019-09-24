@@ -1,0 +1,152 @@
+<section class="telaAdministrativa">
+    <div class="row ">
+        <div class="col s12 m6 l6 pontilhado ">
+            <ul class="collapsible">
+                <li>
+                    <!-- Div de aulas -->
+                    <div class="collapsible-header"><i class="material-icons">apps</i>Aulas</div>
+                    <div class="collapsible-body">
+                        <div class="row spanRow ">
+                            <div class="col s12 m6 l6  divSpan ">
+                                <span class="linkSpan">Cursos cadastrados</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Outra coisa cursos</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Calendário de Cursos</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Adicionar cursos</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="active">
+                    <!-- Div de Estudantes -->
+                    <div class="collapsible-header"><i class="material-icons">group</i>Students</div>
+                    <div class="collapsible-body">
+                        <div class="row spanRow ">
+                            <div class="col s12 m6 l6  divSpan ">
+                                <span class="linkSpan">Alunos cadastrados</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Alunos inadimplentes</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Financeiro</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Aluno da Próxima aula</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <!-- Div do Perfil do Professor -->
+                    <div class="collapsible-header"><i class="material-icons">person_pin</i>Professor</div>
+                    <div class="collapsible-body">
+                        <div class="row spanRow ">
+                            <div class="col s12 m6 l6  divSpan ">
+                                <span class="linkSpan" routerLink="/cadProfessor">Alterar Dados Pessoais</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">Não sei mais</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">...</span>
+                            </div>
+                            <div class="col s12 m6 l6 divSpan ">
+                                <span class="linkSpan">...</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Div com Foto e Detalhes Professor -->
+        <div class="col s12 m6 l6 divLateral pontilhado ">
+            <div class="row ">
+                <div class="col s12 m12 l7 ">
+                    <blockquote>
+                        Professor {{ nome }}, bem-vindo!
+                    </blockquote>
+                    <blockquote>
+                        {{ dataAtual }}
+                    </blockquote>
+                    <blockquote>
+                        <a class="modal-trigger" href="#modal1">Próxima aula</a> - {{ proximaAula }}
+                    </blockquote>
+                </div>
+
+                <div class="col s12 m12 l4 divFoto  ">
+                    <div class="row divImagem">
+                        <img class="imagem z-depth-3 " src="../../../../assets/Vini.jfif" alt="Imagem do Professor">
+                    </div>
+                    <div class="row subImagem ">
+                        <label>{{ nome }}</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h5>Detalhes da Próxima Aula</h5>
+        <hr>
+
+        <div class="row">
+
+            <div class="col s12 m6 l6">
+                <p class="detalheModal ">Data: <span>Dia / Mês / Ano</span></p>
+                <p class="detalheModal dm">Matéria: <span>matériaAula</span></p>
+                <p class="detalheModal dm">Horário:</p>
+                <p class="detalheModal dm">Local: <span> Rua das nao sei, 12345</span></p>
+                <div class="row botoesUm ">
+                    <div class="col s6 m2 l2 divBtnOk">
+                        <a class="modal-close btn waves-effect indigo lighten-2 ">Ok</a>
+                    </div>
+                    <div class="col s6 m6 l6 divBtnCancelar">
+                        <button class="btn waves-effect waves-light red btnCancelarAula " name="action " (click)="cancelarAula() ">
+                            Cancelar aula
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l6 divImagemModal">
+                <div class="divNomeAlunoModal ">
+                    <p><span class="detalheModal ">nomeAluno</span></p>
+                </div>
+                <div class="divImagemUsuario">
+                    <img class="imagemAluno imagem z-depth-3 " src="../../../../assets/Vini.jfif" alt="Imagem do Professor ">
+                </div>
+                <div class="row botoesDois ">
+                    <div class="col s12 m2 l2 divOk">
+                        <a class="modal-close btn waves-effect indigo lighten-2 botaoOk">Ok</a>
+                    </div>
+                    <div class="col s12 m6 l6 divCancelar">
+                        <button  class="btn waves-effect waves-light red btnCancelarAula btnCancelar" name="action " (click)="cancelarAula() ">
+                            Cancelar aula
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
